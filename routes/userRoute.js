@@ -1,8 +1,11 @@
 import express from "express"
-import { fetch } from "../controller/userController.js"
+import { index, store, update, destroy } from "../controller/userController.js"
 
 const route = express.Router();
 
-route.get("/fetch", fetch)
+route.get("/index", index)
+route.post("/store", store)
+route.put("/update/:id", update)
+route.delete("/destroy/:id", destroy)
 
 export default route;
